@@ -280,14 +280,14 @@ export default function DashboardView({
       const alertPrefix = alertsCount > 0 ? `⚠️ (${alertsCount}) ` : '';
       
       // Update HTML document title directly
-      document.title = `${alertPrefix}[${timeStr}] StadiumVerse AI${temp}${loc}`;
+      document.title = `${alertPrefix}[${timeStr}] Stadium Pulse AIOS${temp}${loc}`;
     };
 
     updateTime();
     const interval = setInterval(updateTime, 1000);
     return () => {
       clearInterval(interval);
-      document.title = "StadiumVerse AI";
+      document.title = "Stadium Pulse AIOS";
     };
   }, [state.weather, currentAlerts]);
 
@@ -297,7 +297,7 @@ export default function DashboardView({
       id: 'ops-1',
       sender: 'agent',
       agentName: 'Ops Agent',
-      text: "StadiumVerse AI Ops System online. I'm monitoring weather, ticketing flow, IoT sensors, and CCTV heatmaps. Ask me any questions or request dispatcher guidelines.",
+      text: "Stadium Pulse AIOS Ops System online. I'm monitoring weather, ticketing flow, IoT sensors, and CCTV heatmaps. Ask me any questions or request dispatcher guidelines.",
       timestamp: new Date().toLocaleTimeString(),
     },
   ]);
@@ -440,7 +440,7 @@ export default function DashboardView({
         let name = `${latitude.toFixed(2)}°, ${longitude.toFixed(2)}°`;
         try {
           const res = await fetch(`https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`, {
-            headers: { 'Accept-Language': 'en', 'User-Agent': 'StadiumVerse-AI-OS-Applet' }
+            headers: { 'Accept-Language': 'en', 'User-Agent': 'Stadium Pulse-AI-OS-Applet' }
           });
           if (res.ok) {
             const data = await res.json();
@@ -477,7 +477,7 @@ export default function DashboardView({
     try {
       const searchUrl = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(weatherSearchQuery)}&format=json&limit=1`;
       const res = await fetch(searchUrl, {
-        headers: { 'Accept-Language': 'en', 'User-Agent': 'StadiumVerse-AI-OS-Applet' }
+        headers: { 'Accept-Language': 'en', 'User-Agent': 'Stadium Pulse-AI-OS-Applet' }
       });
       if (!res.ok) {
         throw new Error('Geocoding service unavailable.');

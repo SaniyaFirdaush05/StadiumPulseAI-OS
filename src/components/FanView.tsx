@@ -326,7 +326,7 @@ export default function FanView({ state, onUpdateState }: FanViewProps) {
 
         {/* Smartphone Signal / Battery Header bar */}
         <div className="bg-slate-900 h-9 pt-5 px-6 flex justify-between items-center text-[10px] font-semibold text-slate-400 select-none z-20">
-          <span>StadiumVerse Mobile</span>
+          <span>Stadium Pulse Mobile</span>
           <div className="flex items-center gap-1">
             <span>5G</span>
             <div className="w-5 h-2.5 border border-slate-500 rounded-xs p-0.5 flex">
@@ -382,7 +382,7 @@ export default function FanView({ state, onUpdateState }: FanViewProps) {
                   
                   <div className="flex justify-between items-start border-b border-indigo-500/20 pb-2">
                     <div>
-                      <span className="text-[9px] uppercase font-bold tracking-wider text-indigo-400">StadiumVerse VIP</span>
+                      <span className="text-[9px] uppercase font-bold tracking-wider text-indigo-400">Stadium Pulse VIP</span>
                       <h4 className="font-extrabold text-sm text-white mt-0.5">Champions League Final</h4>
                     </div>
                     <Ticket className="h-6 w-6 text-indigo-400" />

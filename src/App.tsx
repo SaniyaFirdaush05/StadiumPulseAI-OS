@@ -248,7 +248,7 @@ export default function App() {
           <div>
             <div className="flex items-center gap-1.5">
               <h1 className="text-lg font-black tracking-tight text-white uppercase font-sans">
-                Stadium<span className="text-emerald-400 font-extrabold">Verse</span> <span className="bg-gradient-to-r from-yellow-400 to-emerald-400 bg-clip-text text-transparent">AI-OS</span>
+                Stadium <span className="text-emerald-400 font-extrabold">Pulse</span> <span className="bg-gradient-to-r from-yellow-400 to-emerald-400 bg-clip-text text-transparent">AI-OS</span>
               </h1>
               <span className="bg-emerald-900/30 border border-emerald-500/30 text-[9px] px-1.5 py-0.5 rounded font-mono text-emerald-400 flex items-center gap-1 uppercase font-bold">
                 <Wifi className="h-2.5 w-2.5 text-emerald-400 animate-pulse" />
@@ -395,7 +395,7 @@ export default function App() {
                     <h3 className="font-bold text-sm uppercase">Simulated Fan View Mode</h3>
                   </div>
                   <p className="text-xs text-slate-400 mt-2 leading-relaxed">
-                    This smartphone terminal simulates the **StadiumVerse Fan Companion App**.
+                    This smartphone terminal simulates the **Stadium Pulse Fan Companion App**.
                     As a simulated fan in <strong className="text-white">Section 103</strong>, you can use wayfinding guides, order concessions, report spills/hazards, and chat directly with the **Fan Assistant Agent**.
                   </p>
                 </div>
@@ -462,7 +462,7 @@ export default function App() {
       
       {/* STATIC FOOTER */}
       <footer className="border-t border-slate-900 bg-slate-950/60 py-4 px-6 text-center text-[10px] font-mono text-slate-600 flex justify-between items-center">
-        <span>© 2026 StadiumVerse AI Decision Systems. All Channels Encrypted.</span>
+        <span>© 2026 Stadium Pulse AIOS Decision Systems. All Channels Encrypted.</span>
         <span className="hidden sm:inline">Powered by Gemini 3.5 Flash Model Core</span>
       </footer>
 

@@ -357,7 +357,7 @@ app.post('/api/gemini/ops-chat', async (req, res) => {
     const weatherStr = JSON.stringify(stadiumState.weather, null, 2);
     const ticketingStr = JSON.stringify(stadiumState.ticketing, null, 2);
 
-    const systemInstruction = `You are the Ops Agent, a highly professional, analytical, and decisive Operations Intelligence AI at the StadiumVerse Command Center.
+    const systemInstruction = `You are the Ops Agent, a highly professional, analytical, and decisive Operations Intelligence AI at the Stadium Pulse Command Center.
 Your role is to analyze multi-modal stadium sensor streams (CCTV analysis, IoT feeds, GPS, ticketing, weather warnings) and assist the human operator.
 Current Stadium Time: ${stadiumState.time || '19:30'}
 Active Weather: ${weatherStr}
@@ -411,7 +411,7 @@ app.post('/api/gemini/fan-chat', async (req, res) => {
     const weatherStr = JSON.stringify(stadiumState.weather, null, 2);
     const timeStr = stadiumState.time || '19:30';
 
-    const systemInstruction = `You are the Fan Agent, the helpful, cheerful, and interactive smart digital concierge of StadiumVerse AI.
+    const systemInstruction = `You are the Fan Agent, the helpful, cheerful, and interactive smart digital concierge of Stadium Pulse AIOS.
 You help fans in the stadium with seat directions, event schedules, food recommendations, and finding shortest lines.
 Current Stadium Time: ${timeStr}
 Current Weather: ${weatherStr}
@@ -586,7 +586,7 @@ app.post('/api/gemini/generate-scenario', async (req, res) => {
     const ai = getGeminiClient();
 
     const systemInstruction = `You are the Event Intelligence Engine simulation generator.
-The user wants to inject a custom scenario into StadiumVerse: "${prompt}".
+The user wants to inject a custom scenario into Stadium Pulse: "${prompt}".
 Based on this scenario, you must output a structured JSON representing a new stadium incident, plus simulated sensor changes.
 Create a realistic (or fun/creative as described by user) event. Specify the incident's category, severity (Low, Medium, High, Critical), title, description, location (e.g. Gate B, Section 104, Concourse North, Restroom West, Pitchside), reportedBy (CCTV, IoT, Fan, Staff), and a smart 'aiSuggestedFix' indicating how the Ops Agent advises resolving it.
 
@@ -640,7 +640,7 @@ app.post('/api/gemini/emergency-commander', async (req, res) => {
     const { incident, stadiumState } = req.body;
     const ai = getGeminiClient();
 
-    const systemInstruction = `You are the Emergency AI Commander, an elite, high-precision automated emergency response system at StadiumVerse.
+    const systemInstruction = `You are the Emergency AI Commander, an elite, high-precision automated emergency response system at Stadium Pulse.
 Analyze the provided high-severity incident and generate an immediate, structured containment, evacuation, and safety strategy.
 Output a JSON response matching the requested schema. Be concise, authoritative, and tactically precise.`;
 
@@ -704,7 +704,7 @@ app.post('/api/gemini/evacuation-advisor', async (req, res) => {
     const { section, stadiumState } = req.body;
     const ai = getGeminiClient();
 
-    const systemInstruction = `You are the Emergency Evacuation Advisor AI at the StadiumVerse Command Center.
+    const systemInstruction = `You are the Emergency Evacuation Advisor AI at the Stadium Pulse Command Center.
 Your role is to calculate the absolute safest, fastest, and lowest-risk exit path for a specific section within the stadium, utilizing real-time sensor streams (CCTV crowd density, gate congestion, active incidents, and weather hazards).
 
 Analyze the current stadiumState carefully:
@@ -769,7 +769,7 @@ app.post('/api/gemini/weather-intelligence', async (req, res) => {
     const { stadiumState } = req.body;
     const ai = getGeminiClient();
 
-    const systemInstruction = `You are the chief Weather Intelligence Advisor AI at the StadiumVerse Command Center.
+    const systemInstruction = `You are the chief Weather Intelligence Advisor AI at the Stadium Pulse Command Center.
 Your role is to analyze current meteorological metrics (temperature, humidity, rain chance, precipitation rate, wind speed, and current roof status) and provide:
 1. Clear, high-priority roof operation advice (Close Roof, Open Roof, or Keep Current State) with physical reasoning.
 2. Direct spectator-protection and fan-comfort advice (e.g., HVAC settings, poncho alerts, heating/cooling zones).
@@ -858,7 +858,7 @@ app.post('/api/gemini/voice-assistant', async (req, res) => {
       model: 'gemini-3.1-flash-lite',
       contents: prompt,
       config: {
-        systemInstruction: "You are the StadiumVerse Live Voice Assistant. Keep your answers extremely concise, friendly, and brief (1-2 sentences max), suitable for spoken audio delivery. Assist with stadium directions, schedules, or quick troubleshooting.",
+        systemInstruction: "You are the Stadium Pulse Live Voice Assistant. Keep your answers extremely concise, friendly, and brief (1-2 sentences max), suitable for spoken audio delivery. Assist with stadium directions, schedules, or quick troubleshooting.",
         responseModalities: ['AUDIO'],
         speechConfig: {
           voiceConfig: {

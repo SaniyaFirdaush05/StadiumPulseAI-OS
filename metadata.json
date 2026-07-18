@@ -1,5 +1,5 @@
 {
-  "name": "StadiumVerse AI",
+  "name": "Stadium Pulse AIOS",
   "description": "An AI-powered stadium intelligence, event operations, and fan engagement platform with Gemini-powered agent intelligence.",
   "requestFramePermissions": ["microphone", "geolocation"],
   "majorCapabilities": [

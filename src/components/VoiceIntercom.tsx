@@ -20,7 +20,7 @@ export default function VoiceIntercom({ onClose, stadiumTime }: VoiceIntercomPro
   const [persona, setPersona] = useState<'fan' | 'ops' | 'staff'>('fan');
   const [statusText, setStatusText] = useState<'Ready' | 'Listening' | 'Thinking' | 'Speaking' | 'Error'>('Ready');
   const [transcripts, setTranscripts] = useState<{ sender: 'user' | 'gemini'; text: string; id: string }[]>([
-    { id: '1', sender: 'gemini', text: "Welcome to StadiumVerse Voice Channel. Hold or tap the microphone to talk with me in real-time!" }
+    { id: '1', sender: 'gemini', text: "Welcome to Stadium Pulse Voice Channel. Hold or tap the microphone to talk with me in real-time!" }
   ]);
   const [isMuted, setIsMuted] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
