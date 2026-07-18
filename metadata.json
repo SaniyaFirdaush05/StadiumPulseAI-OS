@@ -1,0 +1,8 @@
+{
+  "name": "StadiumVerse AI",
+  "description": "An AI-powered stadium intelligence, event operations, and fan engagement platform with Gemini-powered agent intelligence.",
+  "requestFramePermissions": ["microphone", "geolocation"],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

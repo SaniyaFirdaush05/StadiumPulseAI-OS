@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;850;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+}
+
+/* Custom visual utilities */
+.bg-radial-grid {
+  background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 14px 14px;
+}
+
+/* Simulated VIP Ticket Barcode */
+.bg-repeating-barcode {
+  background: repeating-linear-gradient(
+    90deg,
+    #0f172a,
+    #0f172a 3px,
+    #f8fafc 3px,
+    #f8fafc 5px,
+    #0f172a 5px,
+    #0f172a 7px,
+    #f8fafc 7px,
+    #f8fafc 11px,
+    #0f172a 11px,
+    #0f172a 13px,
+    #f8fafc 13px,
+    #f8fafc 15px
+  );
+}
+
+.animate-spin-slow {
+  animation: spin 8s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
